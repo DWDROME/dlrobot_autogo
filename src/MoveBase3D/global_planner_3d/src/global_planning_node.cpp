@@ -416,11 +416,11 @@ int main(int argc, char **argv)
     tf::StampedTransform transform;
     while (true && ros::ok())
     {
-      if (listener.waitForTransform("/map", "/base_link", ros::Time(0), ros::Duration(1.0)))
+      if (listener.waitForTransform("/map", "/body_2d", ros::Time(0), ros::Duration(1.0)))
       {
         try
         {
-          listener.lookupTransform("/map", "/base_link", ros::Time(0), transform); // 查询变换
+          listener.lookupTransform("/map", "/body_2d", ros::Time(0), transform); // 查询变换
           break;
         }
         catch (tf::TransformException &ex)

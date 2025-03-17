@@ -1,5 +1,5 @@
-map_frame_id: /map
-base_frame_id: /base_footprint
+map_frame_id: map
+base_frame_id: body_foot
 replan_period: 0.1              # 路径规划周期：0.1即：10hz
 cmd_period: 0.1                 # cmd_vel发布周期
 state_period: 0.1               # 当前位姿查询周期

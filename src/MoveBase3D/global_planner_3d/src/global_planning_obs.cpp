@@ -245,8 +245,8 @@ int main(int argc, char **argv)
   ros::init(argc, argv, "global_planning_obs");
   ros::NodeHandle nh("~");
 
-  pt_sub = nh.subscribe("pointCloud", 1, rcvLidarCallBack);
-  world_sub = nh.subscribe("map", 1, rcvWorldCallBack);
+  pt_sub = nh.subscribe("/cloud_registered", 1, rcvLidarCallBack);
+  world_sub = nh.subscribe("/map", 1, rcvWorldCallBack);
 
   obs_pub = nh.advertise<sensor_msgs::PointCloud2>("obs_vis", 1);
   obs_cost_pub = nh.advertise<sensor_msgs::PointCloud2>("obs_cost", 1);
